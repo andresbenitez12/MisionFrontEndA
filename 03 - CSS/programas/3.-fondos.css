@@ -10,10 +10,12 @@ div{
     height: 400px;
 }
 
+
 .fondoColor{
     background-color: #0f6666;
 }
 
+/* fondo con transparencia */
 .fondoOpacidad{
     background-color: #5d0c0c;
     opacity: 0.6;
