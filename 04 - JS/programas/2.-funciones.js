@@ -2,7 +2,9 @@ const cuadrado = function(x) {
     return x * x;
 }
 let numero = 4;
-console.log(cuadrado(numero));
+let numero2 = 16
+let sumaNumerosAlCuadrado = cuadrado(numero) + cuadrado(numero2)
+console.log(sumaNumerosAlCuadrado);
 
 
 const ruido = function () {
@@ -20,10 +22,13 @@ const exponencial = function (base, exponente) {
     return resultado;
 }
 
-console.log(exponencial(4,3))
+let resultadoExponencial = exponencial(4,3)
+console.log(resultadoExponencial)
+
 
 
 console.log(sumar(5,65));
+
 function sumar(x, y) {
     return x + y;
 }
@@ -53,9 +58,11 @@ function preguntaDireccion(pregunta) {
 }
 
 function mirar() {
-  if (preguntaDireccion("A que lado?") == "I") {
+  let aDonde = preguntaDireccion("A que lado volteas?");
+  if ( aDonde == "I") {
     return "una casa";
-  } else {
+  }
+  else {
     return "2 osos hambrientos";
   }
 }
@@ -68,11 +75,11 @@ try {
 
 
 
-//Asincrono
+//Asincrono, programacion que ejecuta lineas de codigo no consecutivamente
 setTimeout(() => console.log("Tick"), 500);
 
 let fifteen = Promise.resolve(15);
-fifteen.then(value => console.log(`Got ${value}`));
+fifteen.then((value) => console.log(`Got ${value}`));
 
 const promesa = () =>
   new Promise((resolve, reject) =>

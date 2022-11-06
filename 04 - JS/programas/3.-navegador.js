@@ -1,21 +1,25 @@
 //Encontrar elementos de HTML
 
-const titulo = document.getElementById("titulo");
+const titulo = document.getElementById("titulo"); //Se recomienda siempre usar por ID
 const parrafo = document.getElementsByTagName("p");
 const links = document.getElementsByClassName("links");
 
+console.log(parrafo)
 
 //Cambiar valores de HTML
 titulo.innerHTML = "Titulo cambiado";
+// parrafo[0].innerHTML = "Parrafo cambiado";
 
-document.getElementById("demo").innerHTML = 'The text in first paragraph (index 0) is: ' + parrafo[0].innerHTML;
+document.getElementById("demo").innerHTML = 
+  'The text in first paragraph (index 0) is: ' + parrafo[0].innerHTML;
 
-links[0].href = "google.com"; 
+links[0].href = "google.com";
+links[0].target = "_blank";
 
 //Cambiar estilos
 
 titulo.style.color = "red"
-
+ 
 //Eventos
 
 function cambiarTexto(obj) {
@@ -33,6 +37,7 @@ function mOut(obj) {
 function mDown(obj) {
   obj.style.backgroundColor = "#1ec5e5";
   obj.innerHTML = "sueltame";
+  
 }
 
 function mUp(obj) {
@@ -46,5 +51,5 @@ const boton = document.getElementById("boton");
 boton.addEventListener("click", alerta)
 
 function alerta() {
-    alert("alerta");
+    alert("Hola Mundo!");
 }

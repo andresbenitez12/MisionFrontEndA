@@ -4,6 +4,8 @@ Igualmente está la declaración con la palabra reservada "const" y se usarán c
 console.log("\n************* Variables **************\n");
 var numero1 = 4;
 var numero2 = 6;
+let numero5 = 6;
+const numero6 = 0;
 console.log("Número 1: " + numero1 + " Numero 2: " + numero2);
 
 /*Las cadenas (Strings) son caracteres que pueden ser una frase o palabra y estas pueden darse con comillas dobles "", simples '' o invertidas ``
@@ -19,16 +21,19 @@ console.log(frase1 + "\n" + frase2 + "\n" + frase3);
 console.log("\n************* Condicionales **************\n");
 
 console.log(numero1 != numero2);
+console.log(numero1 < numero2);
+console.log(numero3 != numero3);
 
 /*Los operadores lógicos se utilizan cuando se necesita comparar más de una condicional
 El operador && (AND) necesita que todos sus valores sean true para que la salida sea true
 El operador || (OR) necesita que solo uno de sus valores sea true para que la salida sea true*/
 console.log("\n************* Operador lógico AND **************\n");
-console.log(true && true);
+console.log(true && true && false);
+console.log(numero1 == numero2 && numero1 < numero2);
 
 console.log("\n************* Operador lógico OR **************\n");
-console.log(false || false);
-
+console.log(false || false || true);
+console.log(numero2 > numero1 || numero3 != numero3)
 
 /* Los arreglos son estructuras de datos que nos permiten agrupar datos de un mismo tipo */
 console.log("\n************* Arreglos **************\n");
@@ -36,20 +41,26 @@ let listaDeNumeros = [2, 3, 5, 7, 11, 234];
 
 console.log(listaDeNumeros[5]);
 
-listaDeNumeros.push(16);
+
+listaDeNumeros.push(16); // agregar numeros al vector
 listaDeNumeros.push(939);
 
 console.log(listaDeNumeros);
 console.log(listaDeNumeros.length);
+
+listaDeNumeros.pop(); // saca, remueve los numeros del vector 
+console.log(listaDeNumeros);
+console.log(listaDeNumeros.length);
+
 
 
 let listaDePalabras = ["Explorer", "MisionComander", "LaunchX", "Innovaccion"];
 console.log(listaDePalabras);
 console.log(listaDePalabras.length);
 
-/* Las cadenas (strings) pueden ser tratadas como arreglos */
+/* Las cadenas (strings) pueden ser tratadas como arreglos(vectores) */
 let palabra = "Explorer";
-console.log(palabra[2]);
+console.log(palabra[2]); // buscar letra 2 de la palabra Explorer
 console.log(palabra.length);
 
 
@@ -65,13 +76,14 @@ let explorer = {
     proPer: {
         escolar: "Tareas",
         profesional: "Trabajo",
-        personal: "Negocio"
+        personal: "Negocio",
+        cuantos: 3
     }
 };
 
 console.log(explorer);
 
-console.log(explorer.proPer.escolar);
+console.log(explorer.proPer.escolar);// anidacion '.'
 
 
 /* Flujo condicional */
